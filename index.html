@@ -1,70 +1,57 @@
-import * as React from 'react';
+import * as React from 'react'
 
-// Define the Playground Component
-export var Playground = ({ style }) => {
+export var MainComponent = ({ style }) => {
   return (
     <div
       style={{
         fontFamily: 'Arial, sans-serif',
-        height: '100vh',
-        width: '100%',
         backgroundColor: 'white',
+        width: '100%',
         ...style,
       }}
     >
-      {/* Top Navigation Bar */}
+      {/* Menu Bar */}
       <div
         style={{
-          backgroundColor: '#4CAF50', // Green color for visibility
-          padding: '20px 0',
+          backgroundColor: '#333',
+          padding: '20px',
           textAlign: 'center',
-          marginBottom: '20px', // Add margin to separate from content
         }}
       >
-        {/* Navigation Links */}
-        <a href="#home" style={navItemStyle}>Home</a>
-        <a href="#info" style={navItemStyle}>Info</a>
-        <a href="#read" style={navItemStyle}>Read</a>
+        <a href="#home" style={navStyle}>Home</a>
+        <a href="#info" style={navStyle}>Info</a>
+        <a href="#read" style={navStyle}>Read</a>
       </div>
 
-      {/* Main Content Sections */}
+      {/* Sections */}
       <div id="home" style={sectionStyle}>
         <h1>Home</h1>
-        <p>
-          Welcome to UTOPIA! A decentralized ecosystem for the future.
-        </p>
+        <p>Welcome to UTOPIA! A decentralized ecosystem for the future.</p>
       </div>
 
       <div id="info" style={sectionStyle}>
         <h1>Info</h1>
-        <p>
-          UTOPIA isn’t just a new way to handle money or data—it’s a new way to work together.
-        </p>
+        <p>UTOPIA isn’t just a new way to handle money or data—it’s a new way to work together.</p>
       </div>
 
       <div id="read" style={sectionStyle}>
         <h1>Read</h1>
-        <p>
-          Learn about UTOPIA and its impact on society and technology.
-        </p>
+        <p>Learn about UTOPIA and its impact on society and technology.</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-// Styling for navigation items
-const navItemStyle = {
-  margin: '0 30px',
+// STYLES
+const navStyle = {
+  margin: '0 20px',
   color: 'white',
   fontSize: '20px',
-  fontWeight: 'bold',
   textDecoration: 'none',
-  textTransform: 'uppercase',
-};
+  fontWeight: 'bold',
+}
 
-// Styling for section content
 const sectionStyle = {
   padding: '40px',
   textAlign: 'center',
-  marginTop: '20px',
-};
+}
