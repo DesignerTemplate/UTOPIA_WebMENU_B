@@ -21,12 +21,13 @@ export var Playground = ({ style }) => {
           marginBottom: '20px', // Add margin to separate from content
         }}
       >
+        {/* Navigation Links */}
         <a href="#home" style={navItemStyle}>Home</a>
         <a href="#info" style={navItemStyle}>Info</a>
         <a href="#read" style={navItemStyle}>Read</a>
       </div>
 
-      {/* Main Content */}
+      {/* Main Content Sections */}
       <div id="home" style={sectionStyle}>
         <h1>Home</h1>
         <p>
@@ -58,6 +59,7 @@ const navItemStyle = {
   fontSize: '20px',
   fontWeight: 'bold',
   textDecoration: 'none',
+  textTransform: 'uppercase',
 };
 
 // Styling for section content
